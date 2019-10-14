@@ -3,6 +3,9 @@ package com.world.Student.School;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import school.Util;
+import school.entities.Student;
+
 public class studentDAOdelete {
 
 	

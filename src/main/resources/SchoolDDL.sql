@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-create database World;
-use World;
+create database Students;
+use Students;
  
 CREATE TABLE `School` (
   `schoolID` int NOT NULL,

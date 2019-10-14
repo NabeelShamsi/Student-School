@@ -6,6 +6,10 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import school.Util;
+import school.entities.School;
+import school.entities.Student;
+
 public class StudentDAOSchool {
 	
 	Session session = Util.getSessionFactory().openSession();
