@@ -18,8 +18,7 @@ public class School {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int schoolID;
 	private String schoolName;
-	@OneToMany(mappedBy = "School", cascade = CascadeType.ALL)
-	@JoinColumn(name = "SchoolID")
+	@OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
 	private List<Student> students = new ArrayList<Student>();
 
 	/**

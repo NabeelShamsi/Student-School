@@ -56,7 +56,7 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [studentID=" + studentID + ", studentName=" + studentName 
-				+ ", school=" + school + "]";
+				+ ", school=" + school.getSchoolName() + "]";
 
 	}
 }

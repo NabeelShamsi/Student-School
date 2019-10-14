@@ -21,8 +21,8 @@ public class Util {
 
 			Configuration configuration = new Configuration();
 			Properties settings = new Properties();
-			settings.put(Environment.DRIVER, "com.sql.jc.jdbc.Driver");
-			settings.put(Environment.URL, "jdbc:mysql://localhost:3306/world?serverTimezone=UTC");
+			settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
+			settings.put(Environment.URL, "jdbc:mysql://localhost:3306/students?serverTimezone=UTC");
 			settings.put(Environment.USER, "root");
 			settings.put(Environment.PASS, "arianaya23");
 			settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");

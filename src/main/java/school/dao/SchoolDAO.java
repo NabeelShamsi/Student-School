@@ -7,7 +7,6 @@ import org.hibernate.Transaction;
 
 import school.Util;
 import school.entities.School;
-import school.entities.Student;
 
 public class SchoolDAO {
 	
@@ -16,7 +15,7 @@ public class SchoolDAO {
 		Session session = Util.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
 		
-		School school = session.createQuery("select * from school where schoolName=" + schoolName, School.class).getSingleResult();
+		School school = session.createQuery("from School where schoolName='" + schoolName + "'", School.class).getSingleResult();
 		
 		tx.commit();
 		session.close();
