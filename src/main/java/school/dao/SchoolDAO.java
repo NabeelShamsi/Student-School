@@ -42,7 +42,7 @@ public class SchoolDAO {
 		
 		School school = getSchoolByName(schoolName);
 		new StudentDAO().deleteAllStudents(school);
-		session.createQuery("delete from school where schoolID=" + school.getSchoolID());
+		session.createQuery("delete from School where schoolID=" + school.getSchoolID()).executeUpdate();
 		tx.commit();
 		session.close();
 	}

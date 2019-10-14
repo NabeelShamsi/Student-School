@@ -46,7 +46,7 @@ public class StudentDAO {
 	public Student getStudentByName(String studentName) {
 		Session session = Util.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
-		Student student = session.createQuery("select * from student where studentName=" + studentName, Student.class)
+		Student student = session.createQuery("from Student where studentName= '" + studentName + "'", Student.class)
 				.getSingleResult();
 		tx.commit();
 		session.close();
@@ -56,7 +56,7 @@ public class StudentDAO {
 	public void deleteAllStudents(School school) {
 		Session session = Util.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
-		session.createQuery("delete from student where schoolID=" + school.getSchoolID());
+		session.createQuery("delete from Student where schoolID=" + school.getSchoolID()).executeUpdate();
 		tx.commit();
 		session.close();
 
@@ -66,7 +66,7 @@ public class StudentDAO {
 
 		Session session = Util.getSessionFactory().openSession();
 		Transaction tx = session.beginTransaction();
-		session.createQuery("delete from student where studentName=" + studentName);
+		session.createQuery("delete from Student where studentName='" + studentName + "'").executeUpdate();
 		tx.commit();
 		session.close();
 	}
